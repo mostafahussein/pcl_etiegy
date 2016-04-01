@@ -1,0 +1,11 @@
+[Desktop Entry]
+Version=1.0
+Encoding=UTF-8
+Name=Etisalat USB Modem
+Exec=Etisalat_USB_Modem
+Terminal=false
+X-MultipleArgs=false
+Type=Application
+Icon=Etisalat_USB_Modem.png
+Categories=Application;Network;
+StartupNotify=true

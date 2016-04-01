@@ -1,0 +1,24 @@
+<ussdrecords>
+   <ussdrecord>
+      <recorditem>
+         <commandName>Balance Inquiry</commandName>
+         <commandContant>*555#</commandContant>
+         <commandInfo></commandInfo>
+         <editEnable>0</editEnable>
+         <editEnableussd>0</editEnableussd>
+         <deleEnable>0</deleEnable>
+         <defaultFlag>1</defaultFlag>
+         <id>0</id>
+      </recorditem>
+      <recorditem>
+         <commandName>Estisalat Menu</commandName>
+         <commandContant>*100#</commandContant>
+         <commandInfo/>
+         <editEnable>0</editEnable>
+         <editEnableussd>0</editEnableussd>
+         <deleEnable>0</deleEnable>
+         <defaultFlag>0</defaultFlag>
+         <id>1</id>
+      </recorditem>
+   </ussdrecord>
+</ussdrecords>

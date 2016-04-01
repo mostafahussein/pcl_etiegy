@@ -1,0 +1,61 @@
+#This is a script for getting DNS!!!
+
+###### added by ChenYing 2009-5-27
+if [ -n "`uname -r |grep fc`" ];then 	
+	echo "disable NetworkManager service!"
+	service NetworkManager stop 2>&1 >> /dev/null
+	chkconfig NetworkManager off 2>&1 >> /dev/null
+fi
+###### the end
+
+
+if [ -f /etc/sysconfig/network-scripts/network-functions ]
+then
+	. /etc/sysconfig/network-scripts/network-functions 
+fi
+
+if [ -f /etc/ppp/resolv.conf ]; 
+then
+###### cancel by ChenYing 2009-3-9
+#	rm -f /etc/resolv.conf.prev
+#	echo "; backuped by Mobile Connect Manager" >>/etc/resolv.conf.prev		 
+#	cat /etc/resolv.conf >>/etc/resolv.conf.prev 	
+###### the end by ChenYing 2009-3-9
+	echo "; backuped by Mobile Connect Manager" >/etc/resolv.conf.prev
+	cat /etc/resolv.conf >>/etc/resolv.conf.prev 	
+    if [ -f /var/run/ppp/resolv.conf ]; 
+    then
+         cp -f /var/run/ppp/resolv.conf /etc/ppp/resolv.conf
+    fi
+    cp -f /etc/ppp/resolv.conf /etc/resolv.conf 
+else
+    if [ -f /var/run/ppp/resolv.conf ]; 
+    then
+         cp -f /var/run/ppp/resolv.conf /etc/ppp/resolv.conf
+    fi
+    cp -f /etc/ppp/resolv.conf /etc/resolv.conf 
+
+fi
+
+SUSE_PPP_DNS="/var/run/ppp_resolv.conf.ppp0"
+if [ -e $SUSE_PPP_DNS -a -f $SUSE_PPP_DNS ];then
+    cp -f $SUSE_PPP_DNS /etc/ppp/resolv.conf
+    cp -f $SUSE_PPP_DNS /etc/resolv.conf
+fi
+
+
+
+/sbin/route add default dev ppp0
+
+###### add by ChenYing 2008-12-23
+/sbin/route -n > /etc/ppp/new_route.info 
+rm -f /etc/ppp/ppp0.lnk 
+
+if grep -c 'ppp0' /etc/ppp/new_route.info 
+then
+    echo "ppp0 is ok!" >>/etc/ppp/ppp0.lnk
+    rm -f /etc/ppp/new_route.info
+fi
+###### the end
+
+

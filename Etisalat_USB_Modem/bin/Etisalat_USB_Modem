@@ -1,0 +1,16 @@
+#!/bin/bash
+
+FILE_NAME=Etisalat_USB_Modem
+SYS_PATH=/opt
+INSTALL_PATH=$SYS_PATH/$FILE_NAME
+
+DATE=`date +%y%m%d`
+LOG_NAME=$FILE_NAME${DATE}.log
+
+find $INSTALL_PATH/log -name "*.log" -mtime +6 -exec rm {} \;
+find $INSTALL_PATH/log -name "*.log" -mtime -1 -exec rm {} \;
+cd $INSTALL_PATH
+./$FILE_NAME 2>&1 | tee "$INSTALL_PATH"/log/$LOG_NAME
+
+
+
