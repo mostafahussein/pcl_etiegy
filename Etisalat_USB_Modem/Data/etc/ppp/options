@@ -1,0 +1,22 @@
+/dev/ttyUSB1
+115200
+debug
+noauth
+noipdefault
+#persist
+defaultroute
+usepeerdns
+crtscts
+lock
+asyncmap 20A0000 
+kdebug 4
+netmask 255.255.255.0
+-detach
+lcp-echo-failure 4
+lcp-echo-interval 30
+ipcp-max-failure 30
+ipcp-max-configure 30
+-ccp
+-vj
+#user	li
+#hide-password

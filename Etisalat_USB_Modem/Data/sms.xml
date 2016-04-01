@@ -1,0 +1,8 @@
+<xml>
+    <sms>
+        <inbox/>
+        <outbox/>
+        <draftbox/>
+        <deliveryReportbox/>
+    </sms>
+</xml>

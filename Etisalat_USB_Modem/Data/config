@@ -1,0 +1,239 @@
+centrewidget caption
+Etisalat USB Modem 
+label geometry
+88
+topicon width
+78
+servicelabel foregroundcolor Qt::black
+255
+255
+255
+isplabel foregroundcolor  Qt::black
+255
+255
+255
+pcsimlabel foregroundcolor  Qt::black
+255
+255
+255
+config backgroundcolor
+43
+90
+28
+fig foregroundcolor
+0
+0
+0
+config backgroundpixmap
+./res/base/configBackground.jpg
+topwbackgroundcolor
+43
+90
+18
+mybutton foregroundcolor
+0
+0
+0
+mybutton enterevent foregroundcolor  Qt::red
+255
+0
+0
+mybutton leaveevent foregroundcolor Qt::black
+0
+0
+0
+wirelesswindow caption
+Etisalat USB Modem
+wirelesswindow init backgroundpixmap
+./res/base/CentreBG.jpg
+internetlabel foregroundcolor  Qt::black
+0
+0
+0
+cg active setcolor mid
+220
+211
+252
+cg active setbrush background   QBrush(white,QImage(WIRELESSBARPIXMAP))
+255
+255
+255
+./res/base/CentreBG.jpg
+cg inactive setcolor mid
+220
+211
+252
+cg inactive setbrush background  QBrush(white,QImage(WIRELESSBARPIXMAP))
+255
+255
+255
+./res/base/CentreBG.jpg
+cg diaable setcolor
+220
+211
+252
+cg disable setbrush background   QBrush(white,QImage(WIRELESSBARPIXMAP))
+255
+255
+255
+./res/base/CentreBG.jpg
+showlabel foregroundcolor
+0
+0
+0
+datastatelabel foregroundcolor
+0
+0
+0
+wtmainwindow init tooltiplabel backgroundcolor
+19
+52
+1
+wtmainwindow init tooltiplabel foregroundcolor
+255
+255
+255
+config init contentFrame backgroundcolor
+162
+212
+117
+wireless init alicemobilebutton show or hide  :  1 for show , 0 for hide
+0
+version is onda or zte : 0 for onda , 1 for zte
+1
+default item
+null
+QColor version_bkgrndcolor  :  ZTE is (0,0,0)  OnDA is (0,0,0)
+95
+148
+224
+QColor version_frgrndcolor  :  ZTE is (0,0,0)  OnDA is (255,255,255)
+0
+0
+0
+QColor statistic_info : ZTE 0,0,0 Onda 255,255,255
+0
+0
+0
+QColor newCont_info : ZTE 0,0,0 Onda 255,255,255
+0
+0
+0
+QColor contact_statistic_info : ZTE     Onda 255,255,255
+0
+0
+0
+QColor mymessagebox_frgrndcolor 
+0
+0
+255
+QFont mymessagebox_font 
+9
+QFont mymessagebox_withediter_font
+9
+QFont mybutton_font 
+7
+QFont mybutton_sms_font 
+6
+QFont mybutton_phonebook_font 
+7
+QString initial_pcname : ZTE    Onda Alice MOBILE
+Etisalat USB Modem
+QString already_run_warning
+Etisalat USB Modem is already running!
+QString default_dialnum  ONda  *99#
+*99#
+QString default_apnname  onda ibox.tim.it     3uk  cmnet
+null
+QString default_usename  onda   tim     3uk   3uk
+null
+QString default_passwd   onda TIM     3UK  3UK
+null
+QString default_cfname_ofnewconfig  default config name of new-add-config
+myconfig
+QString default_dialnum_ofnewconfig  
+*99#
+QString default_saveUsernameChecked 
+0
+QString default_usename_ofnewconfig  
+null	
+QString default_passwd_ofnewconfig  
+null
+QString default_apnname_ofnewconfig   
+null
+AutoMatchApn_flag   1: enable; 0:disable
+0
+AutoStart_flag   1: on; 0:off
+0
+modemPortListOrder   1: from usb0 to usbn; 0: from usbn to usb0 
+0
+modemPortNumber   1: enable; 0:disable
+15
+phoneMatchbit
+8
+cdromPort		//pid of cdrom
+0026,2000,2810,0154
+maxAttemptFindPort     // To re-find port after 4 * maxAttemptFindPort seconds 		
+3
+QString lcp_echo_failure	// attempt number of LCP's non-respond
+3
+QString lcp_echo_interval	//time interval of LCP's respond
+15
+QString lcp_max_configure	// Max configure-request of LCP
+10
+QString lcp_max_failure		// Max configure-rejects of LCP
+10
+QString ipcp_max_failure      // Max configure-rejects of IPCP
+10
+QString ipcp_max_configure	// Max configure-request of IPCP
+10
+QString mtu   		// Max Transmit Unit
+0
+QString mru  		// Max Receive Unit
+0
+QString ccp			// Disable  CCP  (Compression  Control Protocol)  
+-ccp
+QString vj
+-vj
+QString Baud
+115200
+QString Operator   //Universal:2g,3g Only Other: umts gprs only
+Universal
+enableFlag_SmsAndPhonebook		//enable to sms and phonebook
+1
+displayFlag_NetworkName		//0:display SPN in the sim; 1:display RPLMN; 2: display by 3GPP
+0
+QString defaultOpenURL		//null: don't connect to default URL;  other: connect to default URL 	
+null
+QString device_type // WCDMA or TD-SCDMA
+WCDMA
+function_space  //the space size between 2 myButton of functions
+80
+stk_function  //1: enable STK; 0: disable STK
+1
+MsssageSetting_function  //1: enable ; 0: disable 
+1
+AlertSetting_function  //1: enable ; 0: disable 
+1
+enableFlag_show_CS_PS  //1: enable ; 0: disable 
+1
+readSimContactNO   //default:20
+20
+QString homeButtonSite  //default:http://www.zte.com.cn
+www.etisalat.com.eg
+showUpdate  //1:show 0:hide
+0
+showTransData
+1
+enableDNS172   //1:forbidden 172 0:enable 172
+0
+wvdial_initcmd_0
+Init = ATQ0 V1 E1 S0=0 &C1 &D2 +FCLASS=0	
+wvdial_initcmd_1
+null
+wvdial_initcmd_2
+null
+wvdial_initcmd_3
+null
+wvdial_initcmd_4
+null
